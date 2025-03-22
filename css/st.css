@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap');
+
+:root{
+    --lg-font: 'Cairo', sans-serif;
+    --sm-font: 'Cairo', sans-serif;
+    --pink: #0F7DC2;
+}
+
+*{
+    font-family: var(--sm-font);
+
+}
+body{
+    font-family: var(--sm-font);
+}
+/* تعديل الألوان */
+.navbar {
+background-color:white;
+}
+.navbar-brand {
+color: #fcbf49;
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+font-size: 1.1rem;
+}
+
+.navbar-nav .nav-link:hover {
+color:#004d99;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+/* ======= Hero Section ======= */
+.hero {
+width: 100%;
+position: relative;
+background:white; /* لون رمادي داكن */
+padding:150px 0 0 0;
+}
+.carousel-item {
+background-color: #004d99;
+height:50vh;
+}
+
+
+@media (min-width: 1365px) {
+.hero {
+background-attachment: fixed;
+}
+}
+
+.hero h2 {
+font-size:35px;
+font-weight: 700;
+margin-bottom: 20px;
+color:black; /* النص الأبيض ليتناسب مع الخلفية الداكنة */
+}
+
+.hero p {
+color:black;
+font-weight: 400;
+margin-bottom: 30px;
+}
+
+.hero .btn-get-started {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding:10px;
+  transition: 0.3s;
+  color:white;
+  background: #3A6B92; /* أزرق داكن */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+}
+
+.hero .btn-get-started:hover {
+  background:#3ec15b; /* لون أزرق أغمق عند التمرير */
+}
+
+
+@media (max-width: 640px) {
+  .hero h2 {
+    font-size: 36px;
+  }
+
+  .hero .btn-get-started,
+  .hero .btn-watch-video {
+    font-size: 14px;
+  }
+}
+
+
+.section-t{
+width:100%;
+display:flex;
+flex-direction: row;
+justify-content:space-between;
+background-color: #fff;
+height:50px;
+margin-top:10px;
+border: .1rem solid rgba(0,0,0,.1);
+text-align:center;
+align-items:center;
+}
+
+.section-t div{
+margin:30px;
+}
+
+/*swiper*/
+.slider-wrapper {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 50px 40px;
+  height:400px;
+  z-index: 10px;
+  
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+color: white;
+background-color: #3ec15b;
+border-radius:50%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex: 0 0 auto;
+font-size: 2rem;
+width: 40px;
+height: 40px;
+}
+
+.card-item {
+  height:fit-content;
+  width:375px;
+  color:black;
+  user-select: none;
+  padding:10px;
+  margin:5px;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  background:white;
+  text-align: center;
+  margin-top:20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+}
+
+.card-item:hover {
+transform: scale(1.05);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card-item img {
+  height:180px;
+  width:180px;
+  object-fit: cover;
+  border-radius:50%;
+  border: 5px solid #fff;
+   margin:0 auto;
+}
+
+.card-title {
+font-size: 1.25rem;
+color:#004d99;
+}
+
+.card-text {
+font-size: 1rem;
+color: #666;
+}
+
+ 
+
+@media (max-width: 768px) {
+.slider-wrapper {
+margin: 0 10px 70px;
+}
+}
+
+footer {
+background-color:white !important;  /* اللون الأزرق */
+color:black;
+padding: 20px;
+text-align: center;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل لطيف */
+}
+
+footer h3 {
+margin-top: 20px;
+}
+
+/* Make lists responsive */
+footer ul,
+footer ol {
+padding-right: 20px;
+list-style-type: none;
+}
+
+  
+footer ul {
+list-style-type: none;
+}
+
+/* Flexbox layout for footer */
+footer .footer-content {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items:center;
+gap: 20px;
+}
+
+footer .footer-content div {
+flex: 1 1 5%;
+min-width: 200px;
+}
+
+/* Ensure footer content is responsive */
+@media (max-width: 768px) {
+footer .footer-content {
+flex-direction: column;
+align-items: center;
+}
+
+footer .footer-content div {
+flex: 1 1 100%;
+min-width: 100%;
+text-align: center;
+}
+
+footer h3 {
+font-size: 18px;
+}
+}
+
+.pagination {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .pagination .page-item {
+    margin: 0 5px;
+  }
+  
+  .pagination .page-item .page-link {
+    border-radius: 25px;
+    padding: 12px 20px;
+    background-color: #e0e0e0;
+    color: #444;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  .pagination .page-item .page-link:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  .pagination .page-item .page-link:focus {
+    box-shadow: none;
+  }
+  
+  @media (max-width: 576px) {
+    .pagination {
+      width: 100%;
+      font-size: 16px;
+    }
+  
+    .pagination .page-item .page-link {
+      padding: 10px 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pagination {
+      width: 90%;
+      font-size: 17px;
+    }
+  
+    .pagination .page-item .page-link {
+      padding: 11px 18px;
+    }
+  }
+  
