@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>السلة</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/st.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      padding-top: 80px; /* المسافة بين الشريط العلوي والمحتوى */
+    }
+
+    nav.navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 80px; /* تعديل المسافة لتكون تحت الشريط العلوي */
+    }
+
+    .cart-item {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .cart-item-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .cart-item-details {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .total-price {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #28a745;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .checkout-btn, .clear-cart-btn {
+      width: 100%;
+      padding: 15px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .checkout-btn:hover, .clear-cart-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .empty-cart {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .empty-cart p {
+      font-size: 1.2rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand navbar-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand text-primary" href="index.html">
+        الرئيسية 
+        <i class="bi bi-arrow-left-circle"></i> <!-- إضافة رمز السهم -->
+      </a>
+  
+      <!-- زر التبديل للأجهزة الصغيرة -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- العناصر في القائمة -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <!-- رابط تفاصيل العقار -->
+          <a class="nav-link active fs-5 text-primary" id="category-title" aria-current="page" href="#">
+          سلة الطلبات
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container cart-container">
+    <h2 class="text-center">السلة</h2>
+    
+    <div id="cart-items-container">
+      <!-- سيتم ملء العناصر هنا -->
+    </div>
+
+    <div id="empty-cart" class="empty-cart" style="display: none;">
+      <p>السلة فارغة، يمكنك إضافة بعض المنتجات.</p>
+    </div>
+
+    <div class="total-price" id="total-price">
+      الإجمالي: 0 ريال
+    </div>
+
+    <button id="checkout-btn" class="checkout-btn m-1" style="display: none;" onclick="proceedToCheckout()">
+      إتمام الشراء
+    </button>
+
+    <!-- زر تفريغ السلة -->
+    <button id="clear-cart-btn" class="btn btn-danger m-1" style="display: none; width:100%;" onclick="clearCart()">
+      إفراغ السلة
+    </button>
+      
+  </div>
+
+  <!-- تحميل مكتبات JavaScript الخاصة بـ Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

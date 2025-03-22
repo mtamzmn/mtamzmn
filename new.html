@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مثال لتضمين صفحة ويب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>موقع يحتوي على تضمين صفحة ويب</h1>
+</header>
+
+<div class="container">
+    <h2>عنوان القسم: عرض صفحة ويب أخرى</h2>
+    <p>في هذا المثال، سنقوم بتضمين صفحة ويب أخرى داخل هذا الموقع باستخدام عنصر الـ iframe.</p>
+
+    <!-- تضمين صفحة ويب أخرى باستخدام iframe -->
+    <iframe src="http://zamanrest.wuaze.com/res/handleCommentReply.php" title="صفحة ويب مدمجة"></iframe>
+</div>
+
+<footer>
+    <p>&copy; 2025 جميع الحقوق محفوظة</p>
+</footer>
+
+</body>
+</html>
