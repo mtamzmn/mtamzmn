@@ -278,8 +278,7 @@
 
       <!-- نموذج إضافة تعليق -->
       <div class="comment-form">
-        <textarea id="comment-text" class="form-control" rows="4" placeholder="اكتب تعليقك هنا..."></textarea>
-        <button class="btn btn-success mt-2" onclick="addNewComment()">إضافة تعليق</button>
+        <button class="btn btn-success mt-2" onclick="openPopup()">إضافة تعليق</button>
       </div>
     </div>
   </div>
@@ -299,5 +298,17 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   <script src="js/details.js"></script>
+  <script>
+    function openPopup() {
+        const url = new URL(window.location.href);  // الحصول على رابط الصفحة الحالية
+        const productId = new URLSearchParams(url.search).get('fId');  // استخراج معرّف المنتج من الرابط
+        
+        // بناء الرابط الجديد مع إضافة معرّف المنتج
+        const newUrl = `https://mtamzman.infy.uk/sendcomment.html?fId=${productId}`;
+
+        // فتح الرابط في نافذة منبثقة
+        window.open(newUrl, 'popup', 'width=800,height=600,scrollbars=yes');
+    }
+  </script>
 </body>
 </html>
